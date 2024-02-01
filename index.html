@@ -194,7 +194,7 @@
             }
             var percent = (count / 15) * 100;
             $(".progress-bar").attr("style", 'width:' + percent + '%');
-            if(count >= 15)
+            if(count >= 2)
                 WinFunction();
 
             var up = 0, left = 0, right = 0, down = 0, flag = 0;//flag is temp var to check if  left/right movements r possible or not
@@ -409,8 +409,6 @@
             document.getElementById("SignupForm").reset();
         })
     </script>
-    <script src="js/jquery.validate.min.js"></script>
-    <script src="js/jquery.formtowizard.js"></script>
     <title>Nhà Thiếu nhi Quận 10</title>
 </head>
 
@@ -475,70 +473,69 @@
                   <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
                 </div>
                 <div class="modal-body">
-                    <form id="SignupForm" name="google-sheet" class="agile_form" method="post"> 
-                        <fieldset>
-                            <!-- <h3><img src="image/nhathieunhi.png"style="margin-top: -15px;"><br>
-                            Nhà thiếu nhi quận 10</h3> -->
-                            <div class="header"style="margin-top: -50px;font-weight: bolder;font-size: 15px;text-align: center;"><br><br>
-                                <p>Gửi kết quả ghép tranh</p>
+                    <form action='https://script.google.com/macros/s/AKfycbw2U6F5Z-QlKd3joi__EuSBpxkQftsFebkPTpU31GCsxJ2kwc3l9r7AGBEdjRe8LByz/exec' 
+                        id="SignupForm" name="google-sheet" class="agile_form" method="post"> 
+                        <!-- <h3><img src="image/nhathieunhi.png"style="margin-top: -15px;"><br>
+                        Nhà thiếu nhi quận 10</h3> -->
+                        <div class="header"style="margin-top: -50px;font-weight: bolder;font-size: 15px;text-align: center;"><br><br>
+                            <p>Gửi kết quả ghép tranh</p>
+                        </div>
+                        <div class="form-group agileits_ryuzak_form w3_agileits_margin">
+                            <span style="font-size: 14px;">Họ và tên</span>
+                            <div class="wthree_input">
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                                <input id="HoTen" type="text" name="HoTen" class="form-control" placeholder="Họ và tên" required="" />
                             </div>
-                            <div class="form-group agileits_ryuzak_form w3_agileits_margin">
-                                <span style="font-size: 14px;">Họ và tên</span>
-                                <div class="wthree_input">
-                                    <i class="fa fa-user" aria-hidden="true"></i>
-                                    <input id="HoTen" type="text" name="HoTen" class="form-control" placeholder="Họ và tên" required="" />
-                                </div>
+                        </div>
+                        <div class="form-group agileits_ryuzak_form">
+                            <span style="font-size: 14px;">Ngày sinh</span>
+                            <div class="wthree_input">
+                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                                <input id="NgaySinh" type="text" name="NgaySinh" class="form-control" placeholder="Ngày sinh" required="" />
                             </div>
-                            <div class="form-group agileits_ryuzak_form">
-                                <span style="font-size: 14px;">Ngày sinh</span>
-                                <div class="wthree_input">
-                                    <i class="fa fa-calendar" aria-hidden="true"></i>
-                                    <input id="NgaySinh" type="text" name="NgaySinh" class="form-control" placeholder="Ngày sinh" required="" />
-                                </div>
+                        </div>
+                        <div class="form-group agileits_ryuzak_form w3_agileits_margin">
+                            <span style="font-size: 14px;">Lớp</span>
+                            <div class="wthree_input">
+                                <i class="fa fa-genderless" aria-hidden="true"></i>
+                                <input id="Lop" type="text" name="Lop" class="form-control" placeholder="Lớp" required="" />
                             </div>
-                            <div class="form-group agileits_ryuzak_form w3_agileits_margin">
-                                <span style="font-size: 14px;">Lớp</span>
-                                <div class="wthree_input">
-                                    <i class="fa fa-genderless" aria-hidden="true"></i>
-                                    <input id="Lop" type="text" name="Lop" class="form-control" placeholder="Lớp" required="" />
-                                </div>
+                        </div>
+    
+                        <div class="form-group agileits_ryuzak_form">
+                            <span style="font-size: 14px;">Trường</span>
+                            <div class="wthree_input">
+                                <i class="fa fa-child" aria-hidden="true"></i>
+                                <input id="Truong" type="text" name="Truong" class="form-control" placeholder="Trường" required="" />
                             </div>
-        
-                            <div class="form-group agileits_ryuzak_form">
-                                <span style="font-size: 14px;">Trường</span>
-                                <div class="wthree_input">
-                                    <i class="fa fa-child" aria-hidden="true"></i>
-                                    <input id="Truong" type="text" name="Truong" class="form-control" placeholder="Trường" required="" />
-                                </div>
+                        </div>
+                    
+                        <div class="form-group agileits_ryuzak_form w3_agileits_margin">
+                            <span style="font-size: 14px;">Số điện thoại</span>
+                            <div class="wthree_input">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <input id="Sdt" type="text" name="Sdt" class="form-control" placeholder="Số điện thoại" required="" />
                             </div>
+                        </div>
                         
-                            <div class="form-group agileits_ryuzak_form w3_agileits_margin">
-                                <span style="font-size: 14px;">Số điện thoại</span>
-                                <div class="wthree_input">
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <input id="Sdt" type="text" name="Sdt" class="form-control" placeholder="Số điện thoại" required="" />
-                                </div>
+                        <div class="form-group agileits_ryuzak_form">
+                            <span style="font-size: 14px;">Thời gian</span>
+                            <div class="wthree_input">
+                                <i class="fa fa-globe" aria-hidden="true"></i>
+                                <input id="ThoiGian" type="text" name="ThoiGian" readonly="true" class="form-control" placeholder="Thời gian" required="" />
                             </div>
-                            
-                            <div class="form-group agileits_ryuzak_form">
-                                <span style="font-size: 14px;">Thời gian</span>
-                                <div class="wthree_input">
-                                    <i class="fa fa-globe" aria-hidden="true"></i>
-                                    <input id="ThoiGian" type="text" name="ThoiGian" disabled="disabled" class="form-control" placeholder="Thời gian" required="" />
-                                </div>
+                        </div>
+                        <div class="form-group agileits_ryuzak_form w3_agileits_margin">
+                            <span style="font-size: 14px;">Số lượt</span>
+                            <div class="wthree_input">
+                                <i class="fa fa-building-o" aria-hidden="true"></i>
+                                <input id="Luot" type="text" name="Luot" readonly="true" class="form-control" placeholder="Lượt" required="" />
                             </div>
-                            <div class="form-group agileits_ryuzak_form w3_agileits_margin">
-                                <span style="font-size: 14px;">Số lượt</span>
-                                <div class="wthree_input">
-                                    <i class="fa fa-building-o" aria-hidden="true"></i>
-                                    <input id="Luot" type="text" name="Luot" disabled="disabled" class="form-control" placeholder="Lượt" required="" />
-                                </div>
-                            </div>
-                            <div class="clear"> </div>
-                        </fieldset>
-                        <p>
-                            <button id="SaveAccount" type="submit" class="btn btn-primary agileinfo_primary submit">Gửi kết quả</button>
-                        </p>
+                        </div>
+                        <div class="clear"> </div>
+                        <div class="form-group agileits_ryuzak_form w3_agileits_margin">
+                            <input id="SaveAccount" type="submit" text="Gửi kết quả" style="font-size: 14px;width: 200px;">
+                        </div>
                     </form>	
                 </div>
                 <!-- <div class="modal-footer">
